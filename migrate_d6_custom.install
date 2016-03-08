@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains migrate_d6_custom.install.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Cleans up config entities installed by this module.
+ */
+function migrate_d6_custom_uninstall() {
+  db_query("DELETE FROM {config} WHERE name LIKE '%migrate_plus.migration_group.custom%'");
+  db_query("DELETE FROM {config} WHERE name LIKE '%migrate.migration.d6_node__page_custom%'");
+  drupal_flush_all_caches();
+}

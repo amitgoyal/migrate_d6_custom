@@ -1,0 +1,4 @@
+name: Custom Drupal6 Migration
+type: module
+description: Custom Drupal6 Migration related improvements
+core: 8.x
